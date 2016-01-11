@@ -1,0 +1,17 @@
+{
+  "name": "angular-playground",
+  "version": "0.0.1",
+  "description": "備忘用",
+  "main": "README.md",
+  "scripts": {
+    "testInject": "karma start ngmock-inject/karma.conf.js"
+  },
+  "author": "mitsuruog <mitsuru.ogawa.jp@gmail.com> (http://blog.mitsuruog.info/)",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6"
+  }
+}
