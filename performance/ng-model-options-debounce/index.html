@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://rawgit.com/1000ch/grd/gh-pages/dist/grd.css">
+</head>
+<body ng-controller="AppController">
+
+<div>name: {{name}}</div>
+<div>
+  <p>$digest: per every keystroke.</p>
+  <input type="text" ng-model="name">
+</div>
+
+<div>
+  <p>$digest: 250ms after the end of keystroke, and blur is immediate. <strong>recommended :)</strong></p>
+  <input type="text"
+         ng-model="name"
+         ng-model-options="{
+          updateOn: 'default blur',
+          debounce: {
+            'default': 250,
+            'blur': 0
+          }
+         }">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
