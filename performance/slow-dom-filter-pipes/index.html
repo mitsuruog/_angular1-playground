@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://rawgit.com/1000ch/grd/gh-pages/dist/grd.css">
+</head>
+<body ng-controller="AppController">
+
+<div class="Grid">
+  <div class="Cell -6of12">
+    <p>Using DOM filtering. run twice per $digest.</p>
+    <ul ng-repeat="item in items1 | odd: 'template'">
+      <li>{{item.id}} {{item.name}}</li>
+    </ul>
+  </div>
+  <div class="Cell -6of12">
+    <p>Using controller filtering. run once per $digest. <strong>recommended :)</strong></p>
+    <button ng-click="filter()">filter list</button>
+    <ul ng-repeat="item in items2">
+      <li>{{item.id}} {{item.name}}</li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
