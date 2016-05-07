@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://rawgit.com/1000ch/grd/gh-pages/dist/grd.css">
+</head>
+<body>
+
+<div class="Grid">
+  <div id="app1" class="Cell -6of12" ng-controller="AppController">
+    <h3>Normal</h3>
+    {{name}}
+    <pre>{{user | json}}</pre>
+  </div>
+  <div id="app2" class="Cell -6of12" ng-controller="AppController">
+    <h3>Using $httpProvider.useApplyAsync(true)</h3>
+    {{name}}
+    <pre>{{user | json}}</pre>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
