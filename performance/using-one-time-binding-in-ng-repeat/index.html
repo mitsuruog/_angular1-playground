@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://rawgit.com/1000ch/grd/gh-pages/dist/grd.css">
+</head>
+<body ng-controller="AppController">
+<button ng-click="generateData()">re-generate list data</button>
+
+<div class="Grid">
+  <div class="Cell -4of12">
+    <p>Normal</p>
+    <ul ng-repeat="item in items">
+      <li>{{item.id}} {{item.name}}</li>
+    </ul>
+  </div>
+  <div class="Cell -4of12">
+    <p>Using one time binding to collection</p>
+    <ul ng-repeat="item in ::items">
+      <li>{{item.id}} {{item.name}}</li>
+    </ul>
+  </div>
+  <div class="Cell -4of12">
+    <p>Using one time binding to one by one. <strong>recommended :)</strong></p>
+    <ul ng-repeat="item in items">
+      <li>{{::item.id}} {{::item.name}}</li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
